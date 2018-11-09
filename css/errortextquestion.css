@@ -1,0 +1,11 @@
+.errortextquestion a:link,
+.errortextquestion a:visited {
+    text-decoration: none;
+    color: #000;
+    padding: 0 0px;
+    line-height: 1.5em;
+}
+
+.errortextquestion a:hover {
+    background-color: #ddd;
+}

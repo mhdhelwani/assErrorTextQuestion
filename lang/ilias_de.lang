@@ -1,0 +1,8 @@
+assErrorTextQuestion#:#Fehler markieren (Worte/Zeichen)
+text_direction#:#Textrichtung
+error_type#:#Fehlertyp
+rtl_char_error_message#:#Eine zeichenweise Analyse ist bei RTL-Sprachen leider derzeit nicht möglich.
+is_error_text_changed_message#:#Sie haben den (Fehler/Worte markieren) Text geändert. Bitte klicken Sie erst auf Textanalysirien und dann speichern.
+error_type_word#:#Wort
+error_type_char#:#Zeichen
+errortext_info#:#Bitte wählen Sie zunächst über dem Textfeld aus, ob Sie ganze Wörter oder einzelne Zeichen markieren möchten.<br/>Um ein einzelnes Wort, ein beliebiges Zeichen (auch Leerzeichen) zu markieren, setzen Sie eine Raute &quot;#&quot; direkt davor: &quot;#hier&quot; oder &quot;wie# hier&quot;. Um eine Gruppe von Wörtern, Zeichen oder Leerzeichen zu markieren, umfassen Sie diese mit doppelten Klammern: Dies ist ((ein Beispiel)) und das ein ande((res)).<br/>Wenn Sie Raute oder Doppelklammer als reguläre Zeichen im Text verwenden müssen, markieren Sie dies mit einem vorangestelltem Backslash &quot;\&quot;, also z.B. &quot;\# 1&quot; oder &quot;\))&quot;.<br/>Nachdem Sie Ihre Markierungen vorgenommen haben, klicken Sie auf die Schaltfläche &quot;Text analysieren&quot;, um die Markierungen für die weitere Bearbeitung zu extrahieren. Sie erscheinen anschließend im unteren Bereich der Seite als &quot;Fehlerdaten&quot;.

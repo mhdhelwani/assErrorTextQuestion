@@ -1,0 +1,8 @@
+assErrorTextQuestion#:#Error Text (Words/Character)
+text_direction#:#Text Direction
+error_type#:#Error Type
+rtl_char_error_message#:#Unfortunately, a character analysis is currently not possible with RTL languages.
+is_error_text_changed_message#:#You have changed the error text. Please click first on (Analyze Error Text) and then save.
+error_type_word#:#Word
+error_type_char#:#Character
+errortext_info#:#Please enter the error text. To mark a word/character as an error please insert a hash sign (#) in front of the word/character, like #here. To mark a group of words/characters as an error please encapsulate the words/characters group between double brackets (i.e.: here is ((an example)) of it). If you want to use hash or double-parenthesis as a regular character int the text, please prefix &quot;\&quot; mark, for example &quot;\# 1&quot;.<br/>If you press the &quot;Analyze Error Text&quot; button, all marked words/characters will be extracted for further processing.
