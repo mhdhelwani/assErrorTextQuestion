@@ -259,9 +259,9 @@ class ilErrorTextWizardInputQuestionGUI extends ilTextInputGUI
     /**
      * Insert property html
      *
-     * @return    int    Size
+     * @return	int	Size
      */
-    function insert(&$a_tpl)
+    function insert($a_tpl)
     {
         global $lng;
 
