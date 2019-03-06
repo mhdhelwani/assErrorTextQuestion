@@ -546,7 +546,6 @@ class assErrorTextQuestion extends assQuestion implements ilObjQuestionScoringAd
      */
     public function setExportDetailsXLS($worksheet, $startrow, $active_id, $pass)
     {
-        include_once("./Services/Excel/classes/class.ilExcelUtils.php");
         parent::setExportDetailsXLS($worksheet, $startrow, $active_id, $pass);
 
         $i = 0;
@@ -561,7 +560,7 @@ class assErrorTextQuestion extends assQuestion implements ilObjQuestionScoringAd
 
         $errortext = $this->createErrorTextExport($selections);
         $i++;
-        $worksheet->writeString($startrow + $i, 0, ilExcelUtils::_convert_text($errortext));
+        $worksheet->setCell($startrow + $i, 0, $errortext);
         $i++;
         return $startrow + $i + 1;
     }
