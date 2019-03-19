@@ -10,12 +10,12 @@ $().ready(function () {
     $('div.errortextquestion a').on('click', function(e) {
         var $elm = $(this);
 
-        $elm.toggleClass('sel');
+        $elm.toggleClass('ilc_qetitem_ErrorTextSelected');
 
         var context  = $elm.closest('.errortextquestion');
         var selected = [];
         context.find('a').each(function(i) {
-            if ($(this).hasClass('sel')) {
+            if ($(this).hasClass('ilc_qetitem_ErrorTextSelected')) {
                 selected.push($(this).attr("position"));
             }
         });

@@ -417,27 +417,21 @@ class assErrorTextQuestion extends assQuestion implements ilObjQuestionScoringAd
             $pass = ilObjTest::_getPass($active_id);
         }
 
-        $this->getProcessLocker()->requestUserSolutionUpdateLock();
+        $this->getProcessLocker()->executeUserSolutionUpdateLockOperation(function() use (&$entered_values, $active_id, $pass, $authorized) {
 
-        $affectedRows = $this->removeCurrentSolution($active_id, $pass, $authorized);
+            $this->removeCurrentSolution($active_id, $pass, $authorized);
 
-        $entered_values = false;
-        if (strlen($_POST["qst_" . $this->getId()])) {
-
-            $selected = explode(",", $_POST["qst_" . $this->getId()]);
-
-            foreach ($selected as $sel) {
-                $affectedRows = $this->saveCurrentSolution(
-                    $active_id,
-                    $pass,
-                    $sel,
-                    null,
-                    $authorized);
+            if(strlen($_POST["qst_" . $this->getId()]))
+            {
+                $selected = explode(",", $_POST["qst_" . $this->getId()]);
+                foreach ($selected as $position)
+                {
+                    $this->saveCurrentSolution($active_id, $pass, $position, null, $authorized);
+                }
+                $entered_values = true;
             }
-            $entered_values = true;
-        }
 
-        $this->getProcessLocker()->releaseUserSolutionUpdateLock();
+        });
 
         if ($entered_values) {
             include_once("./Modules/Test/classes/class.ilObjAssessmentFolder.php");
@@ -856,7 +850,7 @@ class assErrorTextQuestion extends assQuestion implements ilObjQuestionScoringAd
             }
 
             if ($returnTextArray[$textKey]["isSelected"]) {
-                $text = vsprintf($text, ["sel", $returnTextArray[$textKey]["word"]]);
+                $text = vsprintf($text, ["ilc_qetitem_ErrorTextSelected", $returnTextArray[$textKey]["word"]]);
             } else {
                 $text = vsprintf($text, ["", $returnTextArray[$textKey]["word"]]);
             }
