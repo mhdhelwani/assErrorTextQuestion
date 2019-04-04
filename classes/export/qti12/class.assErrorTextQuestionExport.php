@@ -3,7 +3,7 @@
 include_once "./Modules/TestQuestionPool/classes/export/qti12/class.assQuestionExport.php";
 
 /**
- * Marker question export
+ * ErrorText question export
  *
  * @author Mohammed Helwani <mohammed.helwani@llz.uni-halle.de>
  * @version $Id: $

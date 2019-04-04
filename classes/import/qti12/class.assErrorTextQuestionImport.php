@@ -3,7 +3,7 @@
 include_once "./Modules/TestQuestionPool/classes/import/qti12/class.assQuestionImport.php";
 
 /**
- * Class for MarkerQuestion import
+ * Class for ErrorTextQuestion import
  *
  * @author Mohammed Helwani <mohammed.helwani@llz.uni-halle.de>
  * @version $Id: $
